@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Галерея артефактов</h1>
+
+    <!-- Счётчик артефактов -->
+    <div id="counter">Артефактов: <span id="count">4</span></div>
+
+    <div class="add-form">
+        <input id="artifact-title" placeholder="Название артефакта">
+        <input id="artifact-category" placeholder="Категория">
+        <input id="artifact-image" placeholder="URL изображения">
+        <button id="add-btn">Добавить артефакт</button>
+
+        <!-- Баннер ошибки -->
+        <div id="error-banner" class="hidden">Пожалуйста, заполните все поля!</div>
+    </div>
+
+    <div class="search-filter">
+        <input id="search-input" placeholder="Поиск по категории...">
+    </div>
+
+    <!-- Вкладки категорий -->
+    <div id="category-tabs">
+        <button class="category-tab active" data-category="all">Все</button>
+    </div>
+
+    <div id="gallery"></div>
+
+    <!-- Кнопка переключения темы -->
+    <button id="theme-btn">Тёмная тема</button>
+</div>
+
+<!-- Модальное окно - -->
+<div id="modal">
+    <div class="modal-content">
+        <button id="close-modal">&times;</button>
+        <img id="modal-img">
+        <h2 id="modal-title"></h2>
+        <p id="modal-category"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
