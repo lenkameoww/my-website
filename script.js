@@ -81,6 +81,7 @@ function createCard(title, category, image) {
     img.className = 'card-image';
     img.src = image;
     img.alt = title;
+    img.loading = "lazy"
 
     // Клик на картинку открывает модалку
     img.onclick = function() {
@@ -284,4 +285,5 @@ window.onload = function() {
             card.style.display = 'block';
         });
     };
+
 };
